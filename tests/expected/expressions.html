@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>tests/valid/expressions.b</title>
+<style>
+body{background:#1e1e1e;color:#d4d4d4;font-family:system-ui,sans-serif;margin:2rem}
+h1{font-size:1.1rem;font-weight:600}
+pre.code{background:#252526;padding:1rem;border-radius:6px;overflow:auto;font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:14px;line-height:1.45;tab-size:4}
+.kw{color:#569cd6;font-weight:bold}
+.ty{color:#4ec9b0}
+.var{color:#f0f0f0}
+.fn{color:#e5c07b}
+.lit{color:#e08a3c}
+.str{color:#98c379}
+.op{color:#b0b0b0}
+.cmt{color:#7f848e;font-style:italic}
+.err{color:#ff5555;text-decoration:underline;text-decoration-color:#ff5555}
+ul.diag{color:#ff8888;font-family:monospace;font-size:13px}
+</style>
+</head>
+<body>
+<h1>tests/valid/expressions.b</h1>
+<pre class="code"><span class="fn">main</span>: <span class="kw">function</span> <span class="ty">integer</span> () <span class="op">=</span> {
+    <span class="var">a</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">1</span> <span class="op">+</span> <span class="lit">2</span> <span class="op">*</span> <span class="lit">3</span> <span class="op">-</span> <span class="lit">4</span> <span class="op">/</span> <span class="lit">2</span> <span class="op">%</span> <span class="lit">3</span>;
+    <span class="var">b</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="op">-</span><span class="var">a</span> <span class="op">^</span> <span class="lit">2</span>;
+    <span class="var">c</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">2</span> <span class="op">^</span> <span class="lit">3</span> <span class="op">^</span> <span class="lit">2</span>;
+    <span class="var">d</span>: <span class="ty">boolean</span> <span class="op">=</span> <span class="op">!</span>(<span class="var">a</span> <span class="op">&lt;</span> <span class="var">b</span>) <span class="op">&amp;&amp;</span> (<span class="var">b</span> <span class="op">&gt;=</span> <span class="var">c</span> <span class="op">||</span> <span class="var">c</span> <span class="op">!=</span> <span class="lit">0</span>) <span class="op">&amp;&amp;</span> <span class="var">a</span> <span class="op">==</span> <span class="var">b</span>;
+    <span class="var">e</span>: <span class="ty">boolean</span> <span class="op">=</span> <span class="var">a</span> <span class="op">&lt;=</span> <span class="var">b</span>;
+    <span class="var">arr</span>: <span class="ty">array</span> [<span class="lit">3</span>] <span class="ty">integer</span> <span class="op">=</span> {<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>};
+    <span class="var">i</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">0</span>;
+    <span class="var">i</span><span class="op">++</span>;
+    <span class="var">i</span><span class="op">--</span>;
+    <span class="var">arr</span>[<span class="var">i</span>] <span class="op">=</span> <span class="var">arr</span>[<span class="var">i</span> <span class="op">+</span> <span class="lit">1</span>] <span class="op">=</span> <span class="lit">7</span>;
+    <span class="var">a</span> <span class="op">=</span> <span class="var">b</span> <span class="op">=</span> <span class="var">c</span>;
+    <span class="var">x</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="fn">f</span>(<span class="fn">g</span>(<span class="lit">1</span>), <span class="fn">h</span>(), <span class="var">arr</span>[<span class="lit">0</span>]);
+    <span class="kw">return</span> <span class="op">-</span>(<span class="var">a</span> <span class="op">+</span> <span class="var">b</span>) <span class="op">*</span> <span class="lit">2</span>;
+}
+</pre>
+</body>
+</html>

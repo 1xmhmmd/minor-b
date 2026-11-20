@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>tests/valid/control_flow.b</title>
+<style>
+body{background:#1e1e1e;color:#d4d4d4;font-family:system-ui,sans-serif;margin:2rem}
+h1{font-size:1.1rem;font-weight:600}
+pre.code{background:#252526;padding:1rem;border-radius:6px;overflow:auto;font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:14px;line-height:1.45;tab-size:4}
+.kw{color:#569cd6;font-weight:bold}
+.ty{color:#4ec9b0}
+.var{color:#f0f0f0}
+.fn{color:#e5c07b}
+.lit{color:#e08a3c}
+.str{color:#98c379}
+.op{color:#b0b0b0}
+.cmt{color:#7f848e;font-style:italic}
+.err{color:#ff5555;text-decoration:underline;text-decoration-color:#ff5555}
+ul.diag{color:#ff8888;font-family:monospace;font-size:13px}
+</style>
+</head>
+<body>
+<h1>tests/valid/control_flow.b</h1>
+<pre class="code"><span class="fn">main</span>: <span class="kw">function</span> <span class="ty">integer</span> () <span class="op">=</span> {
+    <span class="var">i</span>: <span class="ty">integer</span>;
+    <span class="kw">for</span> (<span class="var">i</span> <span class="op">=</span> <span class="lit">0</span>; <span class="var">i</span> <span class="op">&lt;</span> <span class="lit">10</span>; <span class="var">i</span><span class="op">++</span>) {
+        <span class="kw">if</span> (<span class="var">i</span> <span class="op">%</span> <span class="lit">2</span> <span class="op">==</span> <span class="lit">0</span>)
+            <span class="kw">print</span> <span class="str">&quot;even &quot;</span>, <span class="var">i</span>, <span class="str">&quot;\n&quot;</span>;
+        <span class="kw">else</span> <span class="kw">if</span> (<span class="var">i</span> <span class="op">==</span> <span class="lit">5</span>)
+            <span class="kw">print</span> <span class="str">&quot;five\n&quot;</span>;
+        <span class="kw">else</span>
+            <span class="kw">print</span> <span class="str">&quot;odd\n&quot;</span>;
+    }
+    <span class="kw">for</span> (;;) { <span class="kw">return</span> <span class="lit">1</span>; }
+    <span class="kw">if</span> (<span class="lit">true</span>) <span class="kw">if</span> (<span class="lit">false</span>) <span class="kw">print</span> <span class="str">&quot;a&quot;</span>; <span class="kw">else</span> <span class="kw">print</span> <span class="str">&quot;dangling else binds to inner if&quot;</span>;
+    <span class="kw">return</span>;
+}
+</pre>
+</body>
+</html>

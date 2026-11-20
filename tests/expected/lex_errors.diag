@@ -1,0 +1,5 @@
+tests/invalid/lex_errors.b:1:15: error [lexical]: unexpected character '@'
+tests/invalid/lex_errors.b:3:16: error [lexical]: unexpected character '#'
+tests/invalid/lex_errors.b:4:16: error [lexical]: unexpected character '&' (did you mean '&&'?)
+tests/invalid/lex_errors.b:4:20: error [lexical]: unexpected character '|' (did you mean '||'?)
+tests/invalid/lex_errors.b:5:1: error [lexical]: unexpected character 'é' (non-ASCII)

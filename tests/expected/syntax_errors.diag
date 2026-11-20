@@ -1,0 +1,5 @@
+tests/invalid/syntax_errors.b:2:18: error [syntax]: expected an expression, got ';'
+tests/invalid/syntax_errors.b:5:5: error [syntax]: expected ')' after the condition, got '{'
+tests/invalid/syntax_errors.b:8:23: error [syntax]: expected an expression, got ';'
+tests/invalid/syntax_errors.b:9:11: error [syntax]: expected an expression, got ';'
+tests/invalid/syntax_errors.b:11:1: error [syntax]: expected ';' after 'return', got '}'

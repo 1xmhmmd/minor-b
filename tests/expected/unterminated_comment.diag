@@ -1,0 +1,1 @@
+tests/invalid/unterminated_comment.b:2:1: error [lexical]: unterminated block comment

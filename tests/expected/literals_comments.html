@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>tests/valid/literals_comments.b</title>
+<style>
+body{background:#1e1e1e;color:#d4d4d4;font-family:system-ui,sans-serif;margin:2rem}
+h1{font-size:1.1rem;font-weight:600}
+pre.code{background:#252526;padding:1rem;border-radius:6px;overflow:auto;font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:14px;line-height:1.45;tab-size:4}
+.kw{color:#569cd6;font-weight:bold}
+.ty{color:#4ec9b0}
+.var{color:#f0f0f0}
+.fn{color:#e5c07b}
+.lit{color:#e08a3c}
+.str{color:#98c379}
+.op{color:#b0b0b0}
+.cmt{color:#7f848e;font-style:italic}
+.err{color:#ff5555;text-decoration:underline;text-decoration-color:#ff5555}
+ul.diag{color:#ff8888;font-family:monospace;font-size:13px}
+</style>
+</head>
+<body>
+<h1>tests/valid/literals_comments.b</h1>
+<pre class="code"><span class="cmt">/* block comment
+   spanning several lines */</span>
+<span class="var">s1</span>: <span class="ty">string</span> <span class="op">=</span> <span class="str">&quot;tab\there \&quot;quoted\&quot; back\\slash \0 end&quot;</span>;
+<span class="var">c1</span>: <span class="ty">char</span> <span class="op">=</span> <span class="str">'\n'</span>;
+<span class="var">c2</span>: <span class="ty">char</span> <span class="op">=</span> <span class="str">'\''</span>;
+<span class="var">c3</span>: <span class="ty">char</span> <span class="op">=</span> <span class="str">'\0'</span>;
+<span class="var">big</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">9223372036854775807</span>;
+<span class="var">Fog123</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">0</span>; <span class="cmt">// trailing comment</span>
+<span class="var">_underscore</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">007</span>;
+<span class="var">returned</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">1</span>; <span class="cmt">// IDENT, not the keyword 'return'</span>
+</pre>
+</body>
+</html>

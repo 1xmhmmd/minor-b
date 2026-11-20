@@ -1,0 +1,52 @@
+1:1	BLOCK_COMMENT	/* block comment\n   spanning several lines */
+3:1	IDENT	s1
+3:3	DELIM	:
+3:5	KEYWORD	string
+3:12	OP	=
+3:14	STRING	"tab\there \"quoted\" back\\slash \0 end"
+3:55	DELIM	;
+4:1	IDENT	c1
+4:3	DELIM	:
+4:5	KEYWORD	char
+4:10	OP	=
+4:12	CHAR	'\n'
+4:16	DELIM	;
+5:1	IDENT	c2
+5:3	DELIM	:
+5:5	KEYWORD	char
+5:10	OP	=
+5:12	CHAR	'\''
+5:16	DELIM	;
+6:1	IDENT	c3
+6:3	DELIM	:
+6:5	KEYWORD	char
+6:10	OP	=
+6:12	CHAR	'\0'
+6:16	DELIM	;
+7:1	IDENT	big
+7:4	DELIM	:
+7:6	KEYWORD	integer
+7:14	OP	=
+7:16	INT	9223372036854775807
+7:35	DELIM	;
+8:1	IDENT	Fog123
+8:7	DELIM	:
+8:9	KEYWORD	integer
+8:17	OP	=
+8:19	INT	0
+8:20	DELIM	;
+8:22	LINE_COMMENT	// trailing comment
+9:1	IDENT	_underscore
+9:12	DELIM	:
+9:14	KEYWORD	integer
+9:22	OP	=
+9:24	INT	007
+9:27	DELIM	;
+10:1	IDENT	returned
+10:9	DELIM	:
+10:11	KEYWORD	integer
+10:19	OP	=
+10:21	INT	1
+10:22	DELIM	;
+10:24	LINE_COMMENT	// IDENT, not the keyword 'return'
+11:1	EOF	

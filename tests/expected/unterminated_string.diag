@@ -1,0 +1,4 @@
+tests/invalid/unterminated_string.b:1:13: error [lexical]: unterminated string literal
+tests/invalid/unterminated_string.b:3:11: error [lexical]: character literal must contain exactly one character
+tests/invalid/unterminated_string.b:4:11: error [lexical]: empty character literal
+tests/invalid/unterminated_string.b:5:11: error [lexical]: unterminated character literal

@@ -1,0 +1,5 @@
+Program(loc=1:1)
+  decls[0]: VarDecl(name='ok', loc=1:1)
+    type: TypeSpec(name=integer, loc=1:5)
+    init: IntLiteral(value=1, loc=1:15)
+  decls[1]: ErrorNode(loc=2:1)

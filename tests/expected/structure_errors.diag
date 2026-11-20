@@ -1,0 +1,11 @@
+tests/invalid/structure_errors.b:1:25: error [syntax]: expected ':' after parameter 'x', got 'integer'
+tests/invalid/structure_errors.b:5:8: error [syntax]: nested functions are not allowed in Minor-B
+tests/invalid/structure_errors.b:8:4: error [syntax]: 'void' is only allowed as a function return type
+tests/invalid/structure_errors.b:9:1: error [syntax]: expected a declaration of the form 'name : type', got '='
+tests/invalid/structure_errors.b:10:1: error [syntax]: expected a declaration of the form 'name : type', got '}'
+tests/invalid/structure_errors.b:12:1: error [syntax]: expected a declaration of the form 'name : type', got '5'
+tests/invalid/structure_errors.b:14:7: error [syntax]: invalid assignment target (expected a variable or array element)
+tests/invalid/structure_errors.b:15:5: error [syntax]: expected an expression, got 'else'
+tests/invalid/structure_errors.b:16:19: error [syntax]: expected ']' after the array size, got 'integer'
+tests/invalid/structure_errors.b:17:8: error [syntax]: expected ')' after the call arguments, got ';'
+tests/invalid/structure_errors.b:19:1: error [syntax]: expected '}' to close the block, got end of file

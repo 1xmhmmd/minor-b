@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>tests/valid/declarations.b</title>
+<style>
+body{background:#1e1e1e;color:#d4d4d4;font-family:system-ui,sans-serif;margin:2rem}
+h1{font-size:1.1rem;font-weight:600}
+pre.code{background:#252526;padding:1rem;border-radius:6px;overflow:auto;font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:14px;line-height:1.45;tab-size:4}
+.kw{color:#569cd6;font-weight:bold}
+.ty{color:#4ec9b0}
+.var{color:#f0f0f0}
+.fn{color:#e5c07b}
+.lit{color:#e08a3c}
+.str{color:#98c379}
+.op{color:#b0b0b0}
+.cmt{color:#7f848e;font-style:italic}
+.err{color:#ff5555;text-decoration:underline;text-decoration-color:#ff5555}
+ul.diag{color:#ff8888;font-family:monospace;font-size:13px}
+</style>
+</head>
+<body>
+<h1>tests/valid/declarations.b</h1>
+<pre class="code"><span class="cmt">// every kind of declaration from the language reference</span>
+<span class="var">x</span>: <span class="ty">integer</span>;
+<span class="var">y</span>: <span class="ty">integer</span> <span class="op">=</span> <span class="lit">123</span>;
+<span class="var">b</span>: <span class="ty">boolean</span> <span class="op">=</span> <span class="lit">false</span>;
+<span class="var">c</span>: <span class="ty">char</span> <span class="op">=</span> <span class="str">'q'</span>;
+<span class="var">s</span>: <span class="ty">string</span> <span class="op">=</span> <span class="str">&quot;hello world\n&quot;</span>;
+<span class="var">a</span>: <span class="ty">array</span> [<span class="lit">5</span>] <span class="ty">integer</span>;
+<span class="var">a2</span>: <span class="ty">array</span> [<span class="lit">5</span>] <span class="ty">integer</span> <span class="op">=</span> {<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>, <span class="lit">4</span>, <span class="lit">5</span>};
+<span class="var">flags</span>: <span class="ty">array</span> [<span class="lit">2</span>] <span class="ty">boolean</span> <span class="op">=</span> {<span class="lit">true</span>, <span class="lit">false</span>};
+
+<span class="fn">writechar</span>: <span class="kw">function</span> <span class="ty">void</span> ( <span class="var">c</span>: <span class="ty">char</span> );
+<span class="fn">puts</span>: <span class="kw">function</span> <span class="ty">void</span> ( <span class="var">s</span>: <span class="ty">string</span> );
+<span class="fn">square</span>: <span class="kw">function</span> <span class="ty">integer</span> ( <span class="var">x</span>: <span class="ty">integer</span> ) <span class="op">=</span> {
+    <span class="kw">return</span> <span class="var">x</span><span class="op">^</span><span class="lit">2</span>;
+}
+<span class="fn">printarray</span>: <span class="kw">function</span> <span class="ty">void</span> ( <span class="var">a</span>: <span class="ty">array</span> [] <span class="ty">integer</span>, <span class="var">size</span>: <span class="ty">integer</span> ) <span class="op">=</span> {
+    <span class="var">i</span>: <span class="ty">integer</span>;
+    <span class="kw">for</span> (<span class="var">i</span> <span class="op">=</span> <span class="lit">0</span>; <span class="var">i</span> <span class="op">&lt;</span> <span class="var">size</span>; <span class="var">i</span><span class="op">++</span>) {
+        <span class="kw">print</span> <span class="var">a</span>[<span class="var">i</span>], <span class="str">&quot;\n&quot;</span>;
+    }
+}
+<span class="fn">main</span>: <span class="kw">function</span> <span class="ty">integer</span> () <span class="op">=</span> {
+    <span class="fn">puts</span>(<span class="str">&quot;hello world&quot;</span>);
+    <span class="kw">return</span> <span class="lit">0</span>;
+}
+</pre>
+</body>
+</html>
